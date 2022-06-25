@@ -1,8 +1,10 @@
 .navTitle {
   font-size: 2rem;
   font-family: "Acme", sans-serif;
+  color: #9053e0;
 }
 
 .navLinks {
   color: #000;
+  margin: 0 0.4rem;
 }

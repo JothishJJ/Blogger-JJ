@@ -42,16 +42,14 @@ const HeadAFoot: NextPage = (props: any) => {
               </div>
             </MediaQuery>
             <Link href="/">
-              <a
-                className={styles.navTitle}
-                style={{ color: theme.colors.violet[0] }}
-              >
-                Blogger JJ
-              </a>
+              <a className={styles.navTitle}>Blogger JJ</a>
             </Link>
             <Text style={{ margin: "0 1rem" }}>|</Text>
             <Link href="/">
               <a className={styles.navLinks}>Home</a>
+            </Link>
+            <Link href="/about">
+              <a className={styles.navLinks}>About Me</a>
             </Link>
           </div>
         </Header>
