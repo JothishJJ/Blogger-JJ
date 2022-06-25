@@ -1,0 +1,12 @@
+.title {
+  margin-bottom: 2rem;
+  font-family: "Acme", sans-serif;
+}
+
+.bioImage {
+  margin: 2rem auto;
+}
+
+.bio {
+  font-size: 1.2rem;
+}

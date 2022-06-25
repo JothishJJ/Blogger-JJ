@@ -51,7 +51,7 @@ const HeadAFoot: NextPage = (props: any) => {
             </Link>
             <Text style={{ margin: "0 1rem" }}>|</Text>
             <Link href="/">
-              <a>Home</a>
+              <a className={styles.navLinks}>Home</a>
             </Link>
           </div>
         </Header>
