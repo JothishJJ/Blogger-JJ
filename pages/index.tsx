@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import Head from "next/head";
 
+import { GetStaticProps } from "next";
+
 import {
   MantineProvider,
   Container,
@@ -14,10 +16,19 @@ import {
 // Components
 import HeadAFoot from "../components/HeadAFoot";
 
+import { getSortedPostsData } from "../lib/coding";
+
 import styles from "./Home.module.css";
 
-const Home: NextPage = () => {
+// @ts-ignore
+const Home: NextPage = ({ allPostsData }) => {
   const theme = useMantineTheme();
+
+  type postData = {
+    id: number;
+    title: string;
+    description: string;
+  };
 
   return (
     <MantineProvider
@@ -60,6 +71,20 @@ const Home: NextPage = () => {
               </Link>{" "}
               Check some of my blogs bellow 👇
             </Text>
+            {/* @ts-ignore */}
+            <ul className={styles.List} type="none">
+              {allPostsData.map(({ id, title, description }: postData) => (
+                <Link href={"/coding/" + id} key={id}>
+                  <div key={id}>
+                    <li className={styles.listTitle}>
+                      {title}
+                      <br />
+                    </li>
+                    <li className={styles.listDescription}>{description}</li>
+                  </div>
+                </Link>
+              ))}
+            </ul>
           </Container>
         </HeadAFoot>
       </div>
@@ -68,3 +93,12 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+};

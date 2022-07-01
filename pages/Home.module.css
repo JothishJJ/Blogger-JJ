@@ -10,3 +10,21 @@
 .bio {
   font-size: 1.2rem;
 }
+
+.List {
+  padding: 1rem;
+  color: #000;
+}
+.List:hover {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.listTitle {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+  font-family: "Acme", sans-serif;
+}
+
+.listDescription {
+  color: rgba(0, 0, 0, 0.75);
+}

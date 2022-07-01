@@ -16,3 +16,23 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#blog h1 {
+  text-align: center;
+  font-family: Acme, sans-serif;
+  font-size: 4rem;
+}
+
+#blog strong {
+  margin: 0;
+}
+
+#blog * {
+  margin: 1rem;
+  line-height: 1.25rem;
+  font-size: 1.1rem;
+}
+
+#blog img {
+  width: 1000px;
+}
