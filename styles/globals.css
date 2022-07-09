@@ -17,9 +17,12 @@ a {
   box-sizing: border-box;
 }
 
-#blog h1 {
+h1 {
   text-align: center;
   font-family: Acme, sans-serif;
+}
+
+#blog h1 {
   font-size: 4rem;
 }
 
